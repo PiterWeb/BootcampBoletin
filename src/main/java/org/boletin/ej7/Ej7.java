@@ -1,7 +1,5 @@
 package org.boletin.ej7;
 
-import org.campusdual.util.Input;
-
 public class Ej7 {
 
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package org.boletin.ej16;
+package org.boletin.ej18;
 
 import java.util.Arrays;
 import java.util.Optional;
@@ -19,6 +19,10 @@ public abstract class Animal implements ISexual {
     private final Animal[] crias = new Animal[MAX_CRIAS];
     private int numeroCrias = 0;
 
+    private static int lastId = 0;
+
+    private int id;
+
     private static final int MAX_CRIAS = 3;
 
 
@@ -27,9 +31,9 @@ public abstract class Animal implements ISexual {
         this.tipo = tipo;
         this.raza = raza;
         this.medio = medio;
-
         if (sexo.equalsIgnoreCase("hembra"))
             this.sexo = sexo;
+        this.id = genId();
     }
 
     public Animal(Animal animal) {
@@ -38,6 +42,7 @@ public abstract class Animal implements ISexual {
         this.raza = animal.raza;
         this.medio = animal.medio;
         this.sexo = animal.sexo;
+        this.id = genId();
     }
 
     public abstract void reproducirSonido();
@@ -98,7 +103,7 @@ public abstract class Animal implements ISexual {
 
             if (cria == null) return Optional.empty();
 
-            ((Mascota) cria).setNombre("");
+            ((Mascota) cria).setNombre("Cria");
         }
 
         if (this instanceof Vaca)
@@ -124,6 +129,10 @@ public abstract class Animal implements ISexual {
         return Optional.of(cria);
     }
 
+    private static int genId() {
+        return lastId++;
+    }
+
     @Override
     public String toString() {
         return "Animal{" +
@@ -134,6 +143,7 @@ public abstract class Animal implements ISexual {
                 ", sexo='" + sexo + '\'' +
                 ", crias=" + Arrays.toString(crias) +
                 ", numeroCrias=" + numeroCrias +
+                ", id=" + id +
                 '}';
     }
 }

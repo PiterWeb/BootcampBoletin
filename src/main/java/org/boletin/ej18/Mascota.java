@@ -1,4 +1,4 @@
-package org.boletin.ej16;
+package org.boletin.ej18;
 
 
 public abstract class Mascota extends Animal implements ITienePropietario {

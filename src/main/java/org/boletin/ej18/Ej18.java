@@ -1,10 +1,10 @@
-package org.boletin.ej16;
+package org.boletin.ej18;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Optional;
 
-public class Ej16 {
+public class Ej18 {
 
     public static ArrayList<Animal> animales = new ArrayList<Animal>();
 
@@ -12,8 +12,14 @@ public class Ej16 {
 
         Perro perroMacho = new Perro("Boxer", "Piplo", "Manolo", "macho");
         Perro perroHembra = new Perro("Pug", "Dori", "Pedro", "hembra");
+        Perro perroMacho2 = new Perro("Boxer", "Piplo", "Manolo", "macho");
+        Perro perroHembra2 = new Perro("Pug", "Dori", "Pedro", "hembra");
+        Perro perroMacho3 = new Perro("Boxer", "Piplo", "Manolo", "macho");
+        Perro perroHembra3 = new Perro("Pug", "Dori", "Pedro", "hembra");
+        Perro perroMacho4 = new Perro("Boxer", "Piplo", "Manolo", "macho");
+        Perro perroHembra4 = new Perro("Pug", "Dori", "Pedro", "hembra");
 
-        Perro[] perros = new Perro[]{perroHembra, perroMacho};
+        Perro[] perros = new Perro[]{perroHembra, perroMacho, perroHembra2, perroMacho2, perroHembra3, perroMacho3, perroHembra4, perroMacho4};
 
         animales.addAll(Arrays.asList(perros));
 
@@ -52,32 +58,35 @@ public class Ej16 {
 
         animales.addAll(Arrays.asList(pezesPayaso));
 
-        for (int i = 0; i < animales.size(); i++) {
+        for (int limit = 4; limit > 0; limit--) {
 
-            Animal animal1 = animales.get(i);
+            for (int i = 0; i < animales.size(); i++) {
 
-            if (animal1 == null) continue;
+                Animal animal1 = animales.get(i);
 
-            for (int j = 0; j < animales.size(); j++) {
+                if (animal1 == null) continue;
 
-                Animal animal2 = animales.get(j);
+                for (int j = 0; j < animales.size(); j++) {
 
-                if (animal2 == null) continue;
+                    Animal animal2 = animales.get(j);
 
-                while (true) {
+                    if (animal2 == null) continue;
 
-                    Optional<Animal> cria = animal1.addCria(animal2);
+                    while (true) {
 
-                    if (cria.isEmpty()) break;
+                        Optional<Animal> cria = animal1.addCria(animal2);
 
-                    animales.add(cria.get());
+                        if (cria.isEmpty()) break;
+
+                        animales.add(cria.get());
+
+                    }
 
                 }
 
-
             }
-
         }
+
 
         for (Animal a : animales)
             System.out.println(a);
