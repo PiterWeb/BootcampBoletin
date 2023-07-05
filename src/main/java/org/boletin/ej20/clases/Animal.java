@@ -1,5 +1,6 @@
-package org.boletin.ej18.clases;
+package org.boletin.ej20.clases;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -17,7 +18,7 @@ public abstract class Animal implements ISexual {
 
     private Animal[] padres = new Animal[2];
 
-    private final int[] crias = new int[]{-1,-1,-1};
+    private int[] crias = new int[]{-1, -1, -1};
     private int numeroCrias = 0;
 
     private static int lastId = 0;
@@ -59,12 +60,44 @@ public abstract class Animal implements ISexual {
         return sexo;
     }
 
+    public String getReino() {
+        return reino;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public String getRaza() {
+        return raza;
+    }
+
+    public String getMedio() {
+        return medio;
+    }
+
+    public int[] getCrias() {
+        return crias;
+    }
+
+    public int getNumeroCrias() {
+        return numeroCrias;
+    }
+
     public Animal[] getPadres() {
         return padres;
     }
 
     public void setPadres(Animal[] padres) {
         this.padres = padres;
+    }
+
+    public void setCrias(int[] crias) {
+        this.crias = crias;
+    }
+
+    public void setNumeroCrias(int n) {
+        this.numeroCrias = n;
     }
 
     @Override
@@ -136,6 +169,24 @@ public abstract class Animal implements ISexual {
 
     private static int genId() {
         return lastId++;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public ArrayList<Animal> obtenerAntepasados() {
+
+        if (padres[0] == null || padres[1] == null) return new ArrayList<Animal>();
+
+        ArrayList<Animal> antepasados = new ArrayList<Animal>(List.of(padres));
+
+        Arrays.stream(padres).forEach(p -> {
+            antepasados.addAll(p.obtenerAntepasados());
+        });
+
+        return antepasados;
+
     }
 
     @Override

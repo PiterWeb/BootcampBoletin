@@ -1,4 +1,4 @@
-package org.boletin.ej18.clases;
+package org.boletin.ej19.clases;
 
 import java.util.Arrays;
 import java.util.List;
@@ -17,7 +17,7 @@ public abstract class Animal implements ISexual {
 
     private Animal[] padres = new Animal[2];
 
-    private final int[] crias = new int[]{-1,-1,-1};
+    private final int[] crias = new int[]{-1, -1, -1};
     private int numeroCrias = 0;
 
     private static int lastId = 0;
@@ -57,6 +57,30 @@ public abstract class Animal implements ISexual {
     @Override
     public String getSexo() {
         return sexo;
+    }
+
+    public String getReino() {
+        return reino;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public String getRaza() {
+        return raza;
+    }
+
+    public String getMedio() {
+        return medio;
+    }
+
+    public int[] getCrias() {
+        return crias;
+    }
+
+    public int getNumeroCrias() {
+        return numeroCrias;
     }
 
     public Animal[] getPadres() {
