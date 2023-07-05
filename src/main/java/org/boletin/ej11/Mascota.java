@@ -1,7 +1,5 @@
 package org.boletin.ej11;
 
-import org.boletin.ej12.Animal;
-
 public class Mascota extends Animal implements ITienePropietario {
 
     private final String nombre;

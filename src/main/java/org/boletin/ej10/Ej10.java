@@ -1,7 +1,5 @@
 package org.boletin.ej10;
 
-import org.boletin.ej12.Animal;
-
 public class Ej10 {
 
     public static void main(String[] args) {

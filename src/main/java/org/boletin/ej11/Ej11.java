@@ -1,6 +1,4 @@
 package org.boletin.ej11;
-
-import org.boletin.ej12.Animal;
 public class Ej11 {
     public static void main(String[] args) {
 
