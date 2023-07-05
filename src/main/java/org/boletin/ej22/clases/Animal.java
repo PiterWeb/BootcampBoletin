@@ -1,5 +1,6 @@
-package org.boletin.ej19.clases;
+package org.boletin.ej22.clases;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -17,7 +18,7 @@ public abstract class Animal implements ISexual {
 
     private Animal[] padres = new Animal[2];
 
-    private final int[] crias = new int[]{-1, -1, -1};
+    private int[] crias = new int[]{-1, -1, -1};
     private int numeroCrias = 0;
 
     private static int lastId = 0;
@@ -91,6 +92,14 @@ public abstract class Animal implements ISexual {
         this.padres = padres;
     }
 
+    public void setCrias(int[] crias) {
+        this.crias = crias;
+    }
+
+    public void setNumeroCrias(int n) {
+        this.numeroCrias = n;
+    }
+
     @Override
     public void setSexo(String sexo) {
         if (sexo.equalsIgnoreCase("macho") || sexo.equalsIgnoreCase("hembra"))
@@ -112,14 +121,18 @@ public abstract class Animal implements ISexual {
 
         if (sexo.equals(pareja.sexo)) return Optional.empty();
 
+        // No son padre/madre <-> hijo/hija
         if (List.of(pareja.crias).contains(id)) return Optional.empty();
         if (List.of(crias).contains(pareja.id)) return Optional.empty();
 
+
+        // No son hermanos ni hermanastros entre si
         if (pareja.padres[0] != null && List.of(pareja.padres[0].crias).contains(id)) return Optional.empty();
         if (padres[0] != null && List.of(padres[0].crias).contains(pareja.id)) return Optional.empty();
 
         if (pareja.padres[1] != null && List.of(pareja.padres[1].crias).contains(id)) return Optional.empty();
         if (padres[1] != null && List.of(padres[1].crias).contains(pareja.id)) return Optional.empty();
+
 
         Animal cria = null;
 
@@ -135,10 +148,18 @@ public abstract class Animal implements ISexual {
             ((Mascota) cria).setNombre(((Mascota) this).getNombre() + "-" + ((Mascota) pareja).getNombre() + numeroCrias + "-jr");
         }
 
-        if (this instanceof Vaca)
-            cria = new Vaca((AnimalGranja) this);
-        if (this instanceof Oveja)
-            cria = new Oveja((AnimalGranja) this);
+        if (this instanceof AnimalGranja) {
+            if (this instanceof Vaca)
+                cria = new Vaca((AnimalGranja) this);
+            if (this instanceof Oveja)
+                cria = new Oveja((AnimalGranja) this);
+
+            if (this.sexo.equalsIgnoreCase("hembra"))
+                ((AnimalGranja) cria).setPropietario(((AnimalGranja) this).getPropietario());
+            else ((AnimalGranja) cria).setPropietario(((AnimalGranja) pareja).getPropietario());
+
+        }
+
 
         if (this instanceof Tucan)
             cria = new Tucan((AnimalSalvaje) this);
@@ -158,8 +179,26 @@ public abstract class Animal implements ISexual {
         return Optional.of(cria);
     }
 
+    public ArrayList<Animal> obtenerAntepasados() {
+
+        if (padres[0] == null || padres[1] == null) return new ArrayList<Animal>();
+
+        ArrayList<Animal> antepasados = new ArrayList<Animal>(List.of(padres));
+
+        Arrays.stream(padres).forEach(p -> {
+            antepasados.addAll(p.obtenerAntepasados());
+        });
+
+        return antepasados;
+
+    }
+
     private static int genId() {
         return lastId++;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override

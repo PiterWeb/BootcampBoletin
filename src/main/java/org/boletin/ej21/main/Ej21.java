@@ -156,22 +156,4 @@ public class Ej21 {
 
     }
 
-//    public static ArrayList<Animal> obtenerAntepasados(Animal animal) {
-//
-//        ArrayList<Animal> antepasados = new ArrayList<Animal>();
-//        int id = animal.getId();
-//
-//        for (Animal a: animales) {
-//
-//            if (Arrays.stream(a.getCrias()).noneMatch(cria -> id == cria)) continue;
-//
-//            antepasados.add(a);
-//            antepasados.addAll(obtenerAntepasados(a));
-//
-//        }
-//
-//        return antepasados;
-//
-//    }
-
 }

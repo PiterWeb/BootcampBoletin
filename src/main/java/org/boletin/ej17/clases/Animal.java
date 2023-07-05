@@ -132,7 +132,7 @@ public abstract class Animal implements ISexual {
                 ", raza='" + raza + '\'' +
                 ", medio='" + medio + '\'' +
                 ", sexo='" + sexo + '\'' +
-                ", crias=" + Arrays.toString(crias) +
+                ", crias=" + Arrays.toString(crias).replace("-1", "None") +
                 ", numeroCrias=" + numeroCrias +
                 '}';
     }
