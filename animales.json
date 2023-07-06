@@ -1,0 +1,1262 @@
+[
+{
+"id": 1,
+"nombre": "Dori",
+"sexo": "Hembra",
+"tipo": "Perro",
+"propietario": "Pedro",
+"reino": "Mamifero",
+"raza": "Pug",
+"medio": "Terreno",
+"numero_crias": 3,
+"crias": [
+	13,
+	14,
+	15
+]
+},
+
+{
+"id": 0,
+"nombre": "Piplo",
+"sexo": "Macho",
+"tipo": "Perro",
+"propietario": "Manolo",
+"reino": "Mamifero",
+"raza": "Boxer",
+"medio": "Terreno",
+"numero_crias": 3,
+"crias": [
+	13,
+	14,
+	15
+]
+},
+
+{
+"id": 3,
+"nombre": "Olga",
+"sexo": "Hembra",
+"tipo": "Gato",
+"propietario": "Manolo",
+"reino": "Mamifero",
+"raza": "Egipcio",
+"medio": "Terreno",
+"numero_crias": 3,
+"crias": [
+	16,
+	17,
+	18
+]
+},
+
+{
+"id": 2,
+"nombre": "Trosky",
+"sexo": "Macho",
+"tipo": "Gato",
+"propietario": "Pedro",
+"reino": "Mamifero",
+"raza": "Siames",
+"medio": "Terreno",
+"numero_crias": 3,
+"crias": [
+	16,
+	17,
+	18
+]
+},
+
+{
+"id": 5,
+"sexo": "Hembra",
+"tipo": "Vaca",
+"propietario": "Pedro",
+"reino": "Mamifero",
+"raza": "Astuariana",
+"medio": "Terreno",
+"numero_crias": 3,
+"crias": [
+	19,
+	20,
+	21
+]
+},
+
+{
+"id": 4,
+"sexo": "Macho",
+"tipo": "Vaca",
+"propietario": "Manolo",
+"reino": "Mamifero",
+"raza": "Gallega",
+"medio": "Terreno",
+"numero_crias": 3,
+"crias": [
+	19,
+	20,
+	21
+]
+},
+
+{
+"id": 6,
+"sexo": "Hembra",
+"tipo": "Vaca",
+"propietario": "Pedro",
+"reino": "Mamifero",
+"raza": "Vasca",
+"medio": "Terreno",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 8,
+"sexo": "Hembra",
+"tipo": "Tucan",
+"reino": "Ave",
+"raza": "Rojo",
+"medio": "Aereo",
+"numero_crias": 3,
+"crias": [
+	22,
+	23,
+	24
+]
+},
+
+{
+"id": 7,
+"sexo": "Macho",
+"tipo": "Tucan",
+"reino": "Ave",
+"raza": "Azul",
+"medio": "Aereo",
+"numero_crias": 3,
+"crias": [
+	22,
+	23,
+	24
+]
+},
+
+{
+"id": 10,
+"sexo": "Hembra",
+"tipo": "Oveja",
+"propietario": "Manolo",
+"reino": "Mamifero",
+"raza": "Vasca",
+"medio": "Terreno",
+"numero_crias": 3,
+"crias": [
+	25,
+	26,
+	27
+]
+},
+
+{
+"id": 9,
+"sexo": "Macho",
+"tipo": "Oveja",
+"propietario": "Pedro",
+"reino": "Mamifero",
+"raza": "Gallega",
+"medio": "Terreno",
+"numero_crias": 3,
+"crias": [
+	25,
+	26,
+	27
+]
+},
+
+{
+"id": 12,
+"sexo": "Hembra",
+"tipo": "Pez_Payaso",
+"reino": "Pez",
+"raza": "pacífico",
+"medio": "Acuatico",
+"numero_crias": 3,
+"crias": [
+	28,
+	29,
+	30
+]
+},
+
+{
+"id": 11,
+"sexo": "Macho",
+"tipo": "Pez_Payaso",
+"reino": "Pez",
+"raza": "atlantico",
+"medio": "Acuatico",
+"numero_crias": 3,
+"crias": [
+	28,
+	29,
+	30
+]
+},
+
+{
+"id": 13,
+"nombre": "Dori-Piplo0-jr",
+"sexo": "Hembra",
+"tipo": "Perro",
+"propietario": "Pedro",
+"reino": "Mamifero",
+"raza": "Pug",
+"medio": "Terreno",
+"numero_crias": 3,
+"crias": [
+	31,
+	32,
+	33
+]
+},
+
+{
+"id": 14,
+"nombre": "Dori-Piplo1-jr",
+"sexo": "Macho",
+"tipo": "Perro",
+"propietario": "Pedro",
+"reino": "Mamifero",
+"raza": "Pug",
+"medio": "Terreno",
+"numero_crias": 3,
+"crias": [
+	31,
+	32,
+	33
+]
+},
+
+{
+"id": 15,
+"nombre": "Dori-Piplo2-jr",
+"sexo": "Macho",
+"tipo": "Perro",
+"propietario": "Pedro",
+"reino": "Mamifero",
+"raza": "Pug",
+"medio": "Terreno",
+"numero_crias": 3,
+"crias": [
+	43,
+	44,
+	45
+]
+},
+
+{
+"id": 16,
+"nombre": "Olga-Trosky0-jr",
+"sexo": "Macho",
+"tipo": "Gato",
+"propietario": "Manolo",
+"reino": "Mamifero",
+"raza": "Egipcio",
+"medio": "Terreno",
+"numero_crias": 3,
+"crias": [
+	34,
+	35,
+	36
+]
+},
+
+{
+"id": 17,
+"nombre": "Olga-Trosky1-jr",
+"sexo": "Macho",
+"tipo": "Gato",
+"propietario": "Manolo",
+"reino": "Mamifero",
+"raza": "Egipcio",
+"medio": "Terreno",
+"numero_crias": 3,
+"crias": [
+	46,
+	47,
+	48
+]
+},
+
+{
+"id": 18,
+"nombre": "Olga-Trosky2-jr",
+"sexo": "Hembra",
+"tipo": "Gato",
+"propietario": "Manolo",
+"reino": "Mamifero",
+"raza": "Egipcio",
+"medio": "Terreno",
+"numero_crias": 3,
+"crias": [
+	34,
+	35,
+	36
+]
+},
+
+{
+"id": 19,
+"sexo": "Hembra",
+"tipo": "Vaca",
+"propietario": "Pedro",
+"reino": "Mamifero",
+"raza": "Astuariana",
+"medio": "Terreno",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 20,
+"sexo": "Hembra",
+"tipo": "Vaca",
+"propietario": "Pedro",
+"reino": "Mamifero",
+"raza": "Astuariana",
+"medio": "Terreno",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 21,
+"sexo": "Hembra",
+"tipo": "Vaca",
+"propietario": "Pedro",
+"reino": "Mamifero",
+"raza": "Astuariana",
+"medio": "Terreno",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 22,
+"sexo": "Hembra",
+"tipo": "Tucan",
+"reino": "Ave",
+"raza": "Rojo",
+"medio": "Aereo",
+"numero_crias": 3,
+"crias": [
+	37,
+	38,
+	39
+]
+},
+
+{
+"id": 23,
+"sexo": "Macho",
+"tipo": "Tucan",
+"reino": "Ave",
+"raza": "Rojo",
+"medio": "Aereo",
+"numero_crias": 3,
+"crias": [
+	37,
+	38,
+	39
+]
+},
+
+{
+"id": 24,
+"sexo": "Hembra",
+"tipo": "Tucan",
+"reino": "Ave",
+"raza": "Rojo",
+"medio": "Aereo",
+"numero_crias": 3,
+"crias": [
+	49,
+	50,
+	51
+]
+},
+
+{
+"id": 25,
+"sexo": "Hembra",
+"tipo": "Oveja",
+"propietario": "Manolo",
+"reino": "Mamifero",
+"raza": "Vasca",
+"medio": "Terreno",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 26,
+"sexo": "Hembra",
+"tipo": "Oveja",
+"propietario": "Manolo",
+"reino": "Mamifero",
+"raza": "Vasca",
+"medio": "Terreno",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 27,
+"sexo": "Hembra",
+"tipo": "Oveja",
+"propietario": "Manolo",
+"reino": "Mamifero",
+"raza": "Vasca",
+"medio": "Terreno",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 28,
+"sexo": "Macho",
+"tipo": "Pez_Payaso",
+"reino": "Pez",
+"raza": "pacífico",
+"medio": "Acuatico",
+"numero_crias": 3,
+"crias": [
+	40,
+	41,
+	42
+]
+},
+
+{
+"id": 29,
+"sexo": "Macho",
+"tipo": "Pez_Payaso",
+"reino": "Pez",
+"raza": "pacífico",
+"medio": "Acuatico",
+"numero_crias": 3,
+"crias": [
+	52,
+	53,
+	54
+]
+},
+
+{
+"id": 30,
+"sexo": "Hembra",
+"tipo": "Pez_Payaso",
+"reino": "Pez",
+"raza": "pacífico",
+"medio": "Acuatico",
+"numero_crias": 3,
+"crias": [
+	40,
+	41,
+	42
+]
+},
+
+{
+"id": 31,
+"nombre": "Dori-Piplo0-jr-Dori-Piplo1-jr0-jr",
+"sexo": "Macho",
+"tipo": "Perro",
+"propietario": "Pedro",
+"reino": "Mamifero",
+"raza": "Pug",
+"medio": "Terreno",
+"numero_crias": 3,
+"crias": [
+	61,
+	62,
+	63
+]
+},
+
+{
+"id": 32,
+"nombre": "Dori-Piplo0-jr-Dori-Piplo1-jr1-jr",
+"sexo": "Hembra",
+"tipo": "Perro",
+"propietario": "Pedro",
+"reino": "Mamifero",
+"raza": "Pug",
+"medio": "Terreno",
+"numero_crias": 3,
+"crias": [
+	43,
+	44,
+	45
+]
+},
+
+{
+"id": 33,
+"nombre": "Dori-Piplo0-jr-Dori-Piplo1-jr2-jr",
+"sexo": "Macho",
+"tipo": "Perro",
+"propietario": "Pedro",
+"reino": "Mamifero",
+"raza": "Pug",
+"medio": "Terreno",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 34,
+"nombre": "Olga-Trosky0-jr-Olga-Trosky2-jr0-jr",
+"sexo": "Macho",
+"tipo": "Gato",
+"propietario": "Manolo",
+"reino": "Mamifero",
+"raza": "Egipcio",
+"medio": "Terreno",
+"numero_crias": 3,
+"crias": [
+	64,
+	65,
+	66
+]
+},
+
+{
+"id": 35,
+"nombre": "Olga-Trosky0-jr-Olga-Trosky2-jr1-jr",
+"sexo": "Macho",
+"tipo": "Gato",
+"propietario": "Manolo",
+"reino": "Mamifero",
+"raza": "Egipcio",
+"medio": "Terreno",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 36,
+"nombre": "Olga-Trosky0-jr-Olga-Trosky2-jr2-jr",
+"sexo": "Hembra",
+"tipo": "Gato",
+"propietario": "Manolo",
+"reino": "Mamifero",
+"raza": "Egipcio",
+"medio": "Terreno",
+"numero_crias": 3,
+"crias": [
+	46,
+	47,
+	48
+]
+},
+
+{
+"id": 37,
+"sexo": "Macho",
+"tipo": "Tucan",
+"reino": "Ave",
+"raza": "Rojo",
+"medio": "Aereo",
+"numero_crias": 3,
+"crias": [
+	49,
+	50,
+	51
+]
+},
+
+{
+"id": 38,
+"sexo": "Hembra",
+"tipo": "Tucan",
+"reino": "Ave",
+"raza": "Rojo",
+"medio": "Aereo",
+"numero_crias": 3,
+"crias": [
+	55,
+	56,
+	57
+]
+},
+
+{
+"id": 39,
+"sexo": "Macho",
+"tipo": "Tucan",
+"reino": "Ave",
+"raza": "Rojo",
+"medio": "Aereo",
+"numero_crias": 3,
+"crias": [
+	55,
+	56,
+	57
+]
+},
+
+{
+"id": 40,
+"sexo": "Hembra",
+"tipo": "Pez_Payaso",
+"reino": "Pez",
+"raza": "pacífico",
+"medio": "Acuatico",
+"numero_crias": 3,
+"crias": [
+	52,
+	53,
+	54
+]
+},
+
+{
+"id": 41,
+"sexo": "Macho",
+"tipo": "Pez_Payaso",
+"reino": "Pez",
+"raza": "pacífico",
+"medio": "Acuatico",
+"numero_crias": 3,
+"crias": [
+	58,
+	59,
+	60
+]
+},
+
+{
+"id": 42,
+"sexo": "Hembra",
+"tipo": "Pez_Payaso",
+"reino": "Pez",
+"raza": "pacífico",
+"medio": "Acuatico",
+"numero_crias": 3,
+"crias": [
+	58,
+	59,
+	60
+]
+},
+
+{
+"id": 43,
+"nombre": "Dori-Piplo2-jr-Dori-Piplo0-jr-Dori-Piplo1-jr1-jr0-jr",
+"sexo": "Hembra",
+"tipo": "Perro",
+"propietario": "Pedro",
+"reino": "Mamifero",
+"raza": "Pug",
+"medio": "Terreno",
+"numero_crias": 3,
+"crias": [
+	61,
+	62,
+	63
+]
+},
+
+{
+"id": 44,
+"nombre": "Dori-Piplo2-jr-Dori-Piplo0-jr-Dori-Piplo1-jr1-jr1-jr",
+"sexo": "Macho",
+"tipo": "Perro",
+"propietario": "Pedro",
+"reino": "Mamifero",
+"raza": "Pug",
+"medio": "Terreno",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 45,
+"nombre": "Dori-Piplo2-jr-Dori-Piplo0-jr-Dori-Piplo1-jr1-jr2-jr",
+"sexo": "Macho",
+"tipo": "Perro",
+"propietario": "Pedro",
+"reino": "Mamifero",
+"raza": "Pug",
+"medio": "Terreno",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 46,
+"nombre": "Olga-Trosky1-jr-Olga-Trosky0-jr-Olga-Trosky2-jr2-jr0-jr",
+"sexo": "Macho",
+"tipo": "Gato",
+"propietario": "Manolo",
+"reino": "Mamifero",
+"raza": "Egipcio",
+"medio": "Terreno",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 47,
+"nombre": "Olga-Trosky1-jr-Olga-Trosky0-jr-Olga-Trosky2-jr2-jr1-jr",
+"sexo": "Macho",
+"tipo": "Gato",
+"propietario": "Manolo",
+"reino": "Mamifero",
+"raza": "Egipcio",
+"medio": "Terreno",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 48,
+"nombre": "Olga-Trosky1-jr-Olga-Trosky0-jr-Olga-Trosky2-jr2-jr2-jr",
+"sexo": "Hembra",
+"tipo": "Gato",
+"propietario": "Manolo",
+"reino": "Mamifero",
+"raza": "Egipcio",
+"medio": "Terreno",
+"numero_crias": 3,
+"crias": [
+	64,
+	65,
+	66
+]
+},
+
+{
+"id": 49,
+"sexo": "Macho",
+"tipo": "Tucan",
+"reino": "Ave",
+"raza": "Rojo",
+"medio": "Aereo",
+"numero_crias": 3,
+"crias": [
+	67,
+	68,
+	69
+]
+},
+
+{
+"id": 50,
+"sexo": "Macho",
+"tipo": "Tucan",
+"reino": "Ave",
+"raza": "Rojo",
+"medio": "Aereo",
+"numero_crias": 3,
+"crias": [
+	70,
+	71,
+	72
+]
+},
+
+{
+"id": 51,
+"sexo": "Macho",
+"tipo": "Tucan",
+"reino": "Ave",
+"raza": "Rojo",
+"medio": "Aereo",
+"numero_crias": 3,
+"crias": [
+	73,
+	74,
+	75
+]
+},
+
+{
+"id": 52,
+"sexo": "Macho",
+"tipo": "Pez_Payaso",
+"reino": "Pez",
+"raza": "pacífico",
+"medio": "Acuatico",
+"numero_crias": 3,
+"crias": [
+	76,
+	77,
+	78
+]
+},
+
+{
+"id": 53,
+"sexo": "Hembra",
+"tipo": "Pez_Payaso",
+"reino": "Pez",
+"raza": "pacífico",
+"medio": "Acuatico",
+"numero_crias": 3,
+"crias": [
+	76,
+	77,
+	78
+]
+},
+
+{
+"id": 54,
+"sexo": "Hembra",
+"tipo": "Pez_Payaso",
+"reino": "Pez",
+"raza": "pacífico",
+"medio": "Acuatico",
+"numero_crias": 3,
+"crias": [
+	79,
+	80,
+	81
+]
+},
+
+{
+"id": 55,
+"sexo": "Hembra",
+"tipo": "Tucan",
+"reino": "Ave",
+"raza": "Rojo",
+"medio": "Aereo",
+"numero_crias": 3,
+"crias": [
+	67,
+	68,
+	69
+]
+},
+
+{
+"id": 56,
+"sexo": "Hembra",
+"tipo": "Tucan",
+"reino": "Ave",
+"raza": "Rojo",
+"medio": "Aereo",
+"numero_crias": 3,
+"crias": [
+	70,
+	71,
+	72
+]
+},
+
+{
+"id": 57,
+"sexo": "Hembra",
+"tipo": "Tucan",
+"reino": "Ave",
+"raza": "Rojo",
+"medio": "Aereo",
+"numero_crias": 3,
+"crias": [
+	73,
+	74,
+	75
+]
+},
+
+{
+"id": 58,
+"sexo": "Hembra",
+"tipo": "Pez_Payaso",
+"reino": "Pez",
+"raza": "pacífico",
+"medio": "Acuatico",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 59,
+"sexo": "Hembra",
+"tipo": "Pez_Payaso",
+"reino": "Pez",
+"raza": "pacífico",
+"medio": "Acuatico",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 60,
+"sexo": "Macho",
+"tipo": "Pez_Payaso",
+"reino": "Pez",
+"raza": "pacífico",
+"medio": "Acuatico",
+"numero_crias": 3,
+"crias": [
+	79,
+	80,
+	81
+]
+},
+
+{
+"id": 61,
+"nombre": "Dori-Piplo0-jr-Dori-Piplo1-jr0-jr-Dori-Piplo2-jr-Dori-Piplo0-jr-Dori-Piplo1-jr1-jr0-jr0-jr",
+"sexo": "Macho",
+"tipo": "Perro",
+"propietario": "Pedro",
+"reino": "Mamifero",
+"raza": "Pug",
+"medio": "Terreno",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 62,
+"nombre": "Dori-Piplo0-jr-Dori-Piplo1-jr0-jr-Dori-Piplo2-jr-Dori-Piplo0-jr-Dori-Piplo1-jr1-jr0-jr1-jr",
+"sexo": "Macho",
+"tipo": "Perro",
+"propietario": "Pedro",
+"reino": "Mamifero",
+"raza": "Pug",
+"medio": "Terreno",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 63,
+"nombre": "Dori-Piplo0-jr-Dori-Piplo1-jr0-jr-Dori-Piplo2-jr-Dori-Piplo0-jr-Dori-Piplo1-jr1-jr0-jr2-jr",
+"sexo": "Hembra",
+"tipo": "Perro",
+"propietario": "Pedro",
+"reino": "Mamifero",
+"raza": "Pug",
+"medio": "Terreno",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 64,
+"nombre": "Olga-Trosky0-jr-Olga-Trosky2-jr0-jr-Olga-Trosky1-jr-Olga-Trosky0-jr-Olga-Trosky2-jr2-jr2-jr0-jr",
+"sexo": "Hembra",
+"tipo": "Gato",
+"propietario": "Manolo",
+"reino": "Mamifero",
+"raza": "Egipcio",
+"medio": "Terreno",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 65,
+"nombre": "Olga-Trosky0-jr-Olga-Trosky2-jr0-jr-Olga-Trosky1-jr-Olga-Trosky0-jr-Olga-Trosky2-jr2-jr2-jr1-jr",
+"sexo": "Macho",
+"tipo": "Gato",
+"propietario": "Manolo",
+"reino": "Mamifero",
+"raza": "Egipcio",
+"medio": "Terreno",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 66,
+"nombre": "Olga-Trosky0-jr-Olga-Trosky2-jr0-jr-Olga-Trosky1-jr-Olga-Trosky0-jr-Olga-Trosky2-jr2-jr2-jr2-jr",
+"sexo": "Hembra",
+"tipo": "Gato",
+"propietario": "Manolo",
+"reino": "Mamifero",
+"raza": "Egipcio",
+"medio": "Terreno",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 67,
+"sexo": "Hembra",
+"tipo": "Tucan",
+"reino": "Ave",
+"raza": "Rojo",
+"medio": "Aereo",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 68,
+"sexo": "Macho",
+"tipo": "Tucan",
+"reino": "Ave",
+"raza": "Rojo",
+"medio": "Aereo",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 69,
+"sexo": "Hembra",
+"tipo": "Tucan",
+"reino": "Ave",
+"raza": "Rojo",
+"medio": "Aereo",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 70,
+"sexo": "Macho",
+"tipo": "Tucan",
+"reino": "Ave",
+"raza": "Rojo",
+"medio": "Aereo",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 71,
+"sexo": "Macho",
+"tipo": "Tucan",
+"reino": "Ave",
+"raza": "Rojo",
+"medio": "Aereo",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 72,
+"sexo": "Hembra",
+"tipo": "Tucan",
+"reino": "Ave",
+"raza": "Rojo",
+"medio": "Aereo",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 73,
+"sexo": "Hembra",
+"tipo": "Tucan",
+"reino": "Ave",
+"raza": "Rojo",
+"medio": "Aereo",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 74,
+"sexo": "Hembra",
+"tipo": "Tucan",
+"reino": "Ave",
+"raza": "Rojo",
+"medio": "Aereo",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 75,
+"sexo": "Macho",
+"tipo": "Tucan",
+"reino": "Ave",
+"raza": "Rojo",
+"medio": "Aereo",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 76,
+"sexo": "Hembra",
+"tipo": "Pez_Payaso",
+"reino": "Pez",
+"raza": "pacífico",
+"medio": "Acuatico",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 77,
+"sexo": "Macho",
+"tipo": "Pez_Payaso",
+"reino": "Pez",
+"raza": "pacífico",
+"medio": "Acuatico",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 78,
+"sexo": "Hembra",
+"tipo": "Pez_Payaso",
+"reino": "Pez",
+"raza": "pacífico",
+"medio": "Acuatico",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 79,
+"sexo": "Macho",
+"tipo": "Pez_Payaso",
+"reino": "Pez",
+"raza": "pacífico",
+"medio": "Acuatico",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 80,
+"sexo": "Macho",
+"tipo": "Pez_Payaso",
+"reino": "Pez",
+"raza": "pacífico",
+"medio": "Acuatico",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+},
+
+{
+"id": 81,
+"sexo": "Macho",
+"tipo": "Pez_Payaso",
+"reino": "Pez",
+"raza": "pacífico",
+"medio": "Acuatico",
+"numero_crias": 0,
+"crias": [
+	-1,
+	-1
+]
+}
+]
