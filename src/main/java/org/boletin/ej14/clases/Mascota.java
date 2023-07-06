@@ -1,12 +1,17 @@
 package org.boletin.ej14.clases;
 
 
+import org.boletin.ej11.clases.ITienePropietario;
+import org.boletin.ej11.clases.Medio;
+import org.boletin.ej11.clases.Reino;
+import org.boletin.ej11.clases.Tipo;
+
 public abstract class Mascota extends Animal implements ITienePropietario {
 
-    private final String nombre;
+    private String nombre;
     private String propietario;
 
-    public Mascota(String reino, String tipo, String raza, String medio, String nombre, String propietario, String sexo) {
+    public Mascota(Reino reino, Tipo tipo, String raza, Medio medio, String nombre, String propietario, Sexo sexo) {
         super(reino, tipo, raza, medio, sexo);
         this.nombre = nombre;
         this.propietario = propietario;
@@ -24,12 +29,17 @@ public abstract class Mascota extends Animal implements ITienePropietario {
         this.propietario = mascota.propietario;
     }
 
+
+    public String getPropietario() {
+        return propietario;
+    }
+
     public String getNombre() {
         return nombre;
     }
 
-    public String getPropietario() {
-        return propietario;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public void setPropietario(String propietario) {

@@ -1,9 +1,13 @@
 package org.boletin.ej14.clases;
 
+import org.boletin.ej11.clases.Medio;
+import org.boletin.ej11.clases.Reino;
+import org.boletin.ej11.clases.Tipo;
+
 public class Oveja extends AnimalGranja {
 
-    public Oveja(String raza, String propietario, String sexo) {
-        super("Mamifero", "Oveja", raza, "Terreno", propietario, sexo);
+    public Oveja(String raza, String propietario, Sexo sexo) {
+        super(Reino.Mamifero, Tipo.Oveja, raza, Medio.Terreno, propietario, sexo);
     }
 
     public Oveja(AnimalGranja animalGranja) {

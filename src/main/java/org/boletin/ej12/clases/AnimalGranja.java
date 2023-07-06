@@ -1,5 +1,7 @@
 package org.boletin.ej12.clases;
 
+import org.boletin.ej11.clases.ITienePropietario;
+
 public class AnimalGranja extends Animal implements ITienePropietario {
 
     private String propietario;

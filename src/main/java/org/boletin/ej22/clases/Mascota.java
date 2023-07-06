@@ -1,12 +1,18 @@
 package org.boletin.ej22.clases;
 
 
+import org.boletin.ej11.clases.ITienePropietario;
+import org.boletin.ej11.clases.Medio;
+import org.boletin.ej11.clases.Reino;
+import org.boletin.ej11.clases.Tipo;
+import org.boletin.ej14.clases.Sexo;
+
 public abstract class Mascota extends Animal implements ITienePropietario {
 
     private String nombre;
     private String propietario;
 
-    public Mascota(String reino, String tipo, String raza, String medio, String nombre, String propietario, String sexo) {
+    public Mascota(Reino reino, Tipo tipo, String raza, Medio medio, String nombre, String propietario, Sexo sexo) {
         super(reino, tipo, raza, medio, sexo);
         this.nombre = nombre;
         this.propietario = propietario;

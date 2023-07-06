@@ -1,5 +1,10 @@
 package org.boletin.ej14.clases;
 
+import org.boletin.ej11.clases.ITienePropietario;
+import org.boletin.ej11.clases.Medio;
+import org.boletin.ej11.clases.Reino;
+import org.boletin.ej11.clases.Tipo;
+
 public abstract class AnimalGranja extends Animal implements ITienePropietario {
 
     private String propietario;
@@ -9,7 +14,7 @@ public abstract class AnimalGranja extends Animal implements ITienePropietario {
         this.propietario = propietario;
     }
 
-    public AnimalGranja(String reino, String tipo, String raza, String medio, String propietario, String sexo) {
+    public AnimalGranja(Reino reino, Tipo tipo, String raza, Medio medio, String propietario, Sexo sexo) {
         super(reino, tipo, raza, medio, sexo);
         this.propietario = propietario;
     }

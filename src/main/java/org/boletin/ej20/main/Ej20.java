@@ -1,6 +1,7 @@
 package org.boletin.ej20.main;
 
-import org.boletin.ej20.clases.*;
+import org.boletin.ej11.clases.Tipo;
+import org.boletin.ej14.clases.*;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -33,8 +34,8 @@ public class Ej20 {
 
                 int id = Integer.parseInt(valores[0]);
                 String nombre = valores[1];
-                String sexo = valores[2];
-                String tipo = valores[3];
+                Sexo sexo = Sexo.valueOf(valores[2]);
+                Tipo tipo = Tipo.valueOf(valores[3]);
                 String propietario = valores[4];
                 //String reino = valores[5];
                 String raza = valores[6];
@@ -51,11 +52,11 @@ public class Ej20 {
 
                 if (!nombre.equals("")) {
 
-                    if (tipo.equalsIgnoreCase("perro"))
+                    if (tipo == Tipo.Perro)
                         animal = new Perro(raza, nombre, propietario, sexo);
 
 
-                    if (tipo.equalsIgnoreCase("gato"))
+                    if (tipo == Tipo.Gato)
                         animal = new Gato(raza, nombre, propietario, sexo);
 
                     if (animal != null) {
@@ -70,10 +71,10 @@ public class Ej20 {
 
                 if (!propietario.equals("")) {
 
-                    if (tipo.equalsIgnoreCase("vaca"))
+                    if (tipo == Tipo.Vaca)
                         animal = new Vaca(raza, propietario, sexo);
 
-                    if (tipo.equalsIgnoreCase("oveja"))
+                    if (tipo == Tipo.Oveja)
                         animal = new Oveja(raza, propietario, sexo);
 
                     if (animal != null) {
@@ -86,10 +87,10 @@ public class Ej20 {
                     continue;
                 }
 
-                if (tipo.equalsIgnoreCase("tucan"))
+                if (tipo == Tipo.Tucan)
                     animal = new Tucan(raza, sexo);
 
-                if (tipo.equalsIgnoreCase("pezpayaso"))
+                if (tipo == Tipo.Pez_Payaso)
                     animal = new PezPayaso(raza, sexo);
 
                 if (animal != null) {

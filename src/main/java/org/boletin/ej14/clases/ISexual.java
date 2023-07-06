@@ -2,8 +2,8 @@ package org.boletin.ej14.clases;
 
 public interface ISexual {
 
-    String getSexo();
+    Sexo getSexo();
 
-    void setSexo(String sexo);
+    void setSexo(Sexo sexo);
 
 }

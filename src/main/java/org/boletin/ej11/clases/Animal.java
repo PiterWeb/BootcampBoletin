@@ -1,15 +1,15 @@
 package org.boletin.ej11.clases;
 
 public class Animal {
-    private final String reino;
+    private final Reino reino;
 
-    private final String tipo;
+    private final Tipo tipo;
 
     private final String raza;
 
-    private final String medio;
+    private final Medio medio;
 
-    public Animal(String reino, String tipo, String raza, String medio) {
+    public Animal(Reino reino, Tipo tipo, String raza, Medio medio) {
         this.reino = reino;
         this.tipo = tipo;
         this.raza = raza;

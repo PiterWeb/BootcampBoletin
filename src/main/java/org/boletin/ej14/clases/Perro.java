@@ -1,9 +1,12 @@
 package org.boletin.ej14.clases;
 
-public class Perro extends Mascota {
+import org.boletin.ej11.clases.Medio;
+import org.boletin.ej11.clases.Reino;
+import org.boletin.ej11.clases.Tipo;
 
-    public Perro(String raza, String nombre, String propietario, String sexo) {
-        super("Mamifero","Perro",raza,"Terreno",nombre,propietario, sexo);
+public class Perro extends Mascota {
+    public Perro(String raza, String nombre, String propietario, Sexo sexo) {
+        super(Reino.Mamifero, Tipo.Perro,raza, Medio.Terreno,nombre,propietario, sexo);
     }
     public Perro(Mascota mascota) {
         super(mascota);

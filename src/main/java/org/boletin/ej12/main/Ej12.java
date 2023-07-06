@@ -1,12 +1,15 @@
 package org.boletin.ej12.main;
 
+import org.boletin.ej11.clases.Medio;
+import org.boletin.ej11.clases.Reino;
+import org.boletin.ej11.clases.Tipo;
 import org.boletin.ej12.clases.*;
 
 public class Ej12 {
 
     public static void main(String[] args) {
 
-        Animal gato = new Animal("Mamifero", "Gato", "Siames", "Terreno");
+        Animal gato = new Animal(Reino.Mamifero, Tipo.Gato, "Siames", Medio.Terreno);
         System.out.println(gato);
 
         System.out.println(gato.clone());
@@ -17,13 +20,13 @@ public class Ej12 {
 
         System.out.println(gatoMascota);
 
-        Animal vaca = new Animal("Mamifero", "Vaca", "Gallega", "Terreno");
+        Animal vaca = new Animal(Reino.Mamifero, Tipo.Vaca, "Gallega", Medio.Terreno);
 
         Vaca vacaGranja = new Vaca(new AnimalGranja(vaca, "Pedro"));
 
         System.out.println(vacaGranja);
 
-        Tucan tucan = new Tucan(new AnimalSalvaje(new Animal("Ave", "Tucan", "Rojo", "Aereo")));
+        Tucan tucan = new Tucan(new AnimalSalvaje(new Animal(Reino.Ave, Tipo.Tucan, "Rojo", Medio.Aereo)));
 
         System.out.println(tucan);
 

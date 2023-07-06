@@ -10,43 +10,43 @@ public class Ej14 {
     public static HashMap<String, Animal[]> parejas = new HashMap<String, Animal[]>();
     public static void main(String[] args) {
 
-        Perro perroMacho = new Perro("Boxer", "Piplo", "Manolo", "macho");
-        Perro perroHembra = new Perro("Pug", "Dori", "Pedro", "hembra");
+        Perro perroMacho = new Perro("Boxer", "Piplo", "Manolo", Sexo.Macho);
+        Perro perroHembra = new Perro("Pug", "Dori", "Pedro", Sexo.Hembra);
 
         Perro[] perros = new Perro[]{perroHembra, perroMacho};
 
         parejas.put("Perros", perros);
 
-        Gato gatoMacho = new Gato("Siames", "Trosky", "Pedro", "macho");
-        Gato gatoHembra = new Gato("Egipcio", "Olga", "Manolo", "hembra");
+        Gato gatoMacho = new Gato("Siames", "Trosky", "Pedro", Sexo.Macho);
+        Gato gatoHembra = new Gato("Egipcio", "Olga", "Manolo", Sexo.Hembra);
 
         Gato[] gatos = new Gato[]{gatoHembra, gatoMacho};
 
         parejas.put("Gatos", gatos);
 
-        Vaca vacaMacho = new Vaca("Gallega", "Manolo", "macho");
-        Vaca vacaHembra = new Vaca("Astuariana", "Pedro", "hembra");
+        Vaca vacaMacho = new Vaca("Gallega", "Manolo", Sexo.Macho);
+        Vaca vacaHembra = new Vaca("Astuariana", "Pedro", Sexo.Hembra);
 
         Vaca[] vacas = new Vaca[]{vacaHembra, vacaMacho};
 
         parejas.put("Vacas", vacas);
 
-        Tucan tucanMacho = new Tucan("Azul", "macho");
-        Tucan tucanHembra = new Tucan("Rojo", "hembra");
+        Tucan tucanMacho = new Tucan("Azul", Sexo.Macho);
+        Tucan tucanHembra = new Tucan("Rojo", Sexo.Hembra);
 
         Tucan[] tucanes = new Tucan[]{tucanHembra, tucanMacho};
 
         parejas.put("Tucanes", tucanes);
 
-        Oveja ovejaMacho = new Oveja("Gallega", "Pedro", "macho");
-        Oveja ovejaHembra = new Oveja("Vasca", "Manolo", "hembra");
+        Oveja ovejaMacho = new Oveja("Gallega", "Pedro", Sexo.Macho);
+        Oveja ovejaHembra = new Oveja("Vasca", "Manolo", Sexo.Hembra);
 
         Oveja[] ovejas = new Oveja[]{ovejaHembra, ovejaMacho};
 
         parejas.put("Ovejas", ovejas);
 
-        PezPayaso pezPayasoMacho = new PezPayaso("atlantico", "macho");
-        PezPayaso pezPayasoHembra = new PezPayaso("pacífico", "hembra");
+        PezPayaso pezPayasoMacho = new PezPayaso("atlantico", Sexo.Macho);
+        PezPayaso pezPayasoHembra = new PezPayaso("pacífico", Sexo.Hembra);
 
         PezPayaso[] pezesPayaso = new PezPayaso[]{pezPayasoHembra, pezPayasoMacho};
 

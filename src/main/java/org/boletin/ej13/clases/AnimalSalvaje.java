@@ -1,9 +1,12 @@
 package org.boletin.ej13.clases;
 
+import org.boletin.ej11.clases.Medio;
+import org.boletin.ej11.clases.Reino;
+import org.boletin.ej11.clases.Tipo;
+
 public abstract class AnimalSalvaje extends Animal {
 
-
-    public AnimalSalvaje(String reino, String tipo, String raza, String medio) {
+    public AnimalSalvaje(Reino reino, Tipo tipo, String raza, Medio medio) {
         super(reino, tipo, raza, medio);
     }
 

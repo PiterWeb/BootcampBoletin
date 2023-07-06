@@ -1,13 +1,11 @@
 package org.boletin.ej11.main;
 
-import org.boletin.ej11.clases.Animal;
-import org.boletin.ej11.clases.AnimalGranja;
-import org.boletin.ej11.clases.Mascota;
+import org.boletin.ej11.clases.*;
 
 public class Ej11 {
     public static void main(String[] args) {
 
-        Animal gato = new Animal("Mamifero", "Gato", "Siames", "Terreno");
+        Animal gato = new Animal(Reino.Mamifero, Tipo.Gato, "Siames", Medio.Terreno);
         System.out.println(gato);
 
         System.out.println(gato.clone());
@@ -18,7 +16,7 @@ public class Ej11 {
 
         System.out.println("Nombre mascota : " + gatoMascota.getNombre() + "; Propietario : " + gatoMascota.getPropietario());
 
-        Animal vaca = new Animal("Mamifero", "Vaca", "Gallega", "Terreno");
+        Animal vaca = new Animal(Reino.Mamifero, Tipo.Vaca, "Gallega", Medio.Terreno);
 
         AnimalGranja vacaGranja = new AnimalGranja(vaca, "Pedro");
 

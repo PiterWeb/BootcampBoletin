@@ -1,20 +1,26 @@
 package org.boletin.ej22.clases;
 
+import org.boletin.ej11.clases.Medio;
+import org.boletin.ej11.clases.Reino;
+import org.boletin.ej11.clases.Tipo;
+import org.boletin.ej14.clases.ISexual;
+import org.boletin.ej14.clases.Sexo;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
 public abstract class Animal implements ISexual {
-    private final String reino;
+    private final Reino reino;
 
-    private final String tipo;
+    private final Tipo tipo;
 
     private final String raza;
 
-    private final String medio;
+    private final Medio medio;
 
-    private String sexo = "macho";
+    private Sexo sexo;
 
     private Animal[] padres = new Animal[2];
 
@@ -28,13 +34,12 @@ public abstract class Animal implements ISexual {
     private static final int MAX_CRIAS = 3;
 
 
-    public Animal(String reino, String tipo, String raza, String medio, String sexo) {
+    public Animal(Reino reino, Tipo tipo, String raza, Medio medio, Sexo sexo) {
         this.reino = reino;
         this.tipo = tipo;
         this.raza = raza;
         this.medio = medio;
-        if (sexo.equalsIgnoreCase("hembra"))
-            this.sexo = sexo;
+        this.sexo = sexo;
         this.id = genId();
     }
 
@@ -56,15 +61,15 @@ public abstract class Animal implements ISexual {
     }
 
     @Override
-    public String getSexo() {
+    public Sexo getSexo() {
         return sexo;
     }
 
-    public String getReino() {
+    public Reino getReino() {
         return reino;
     }
 
-    public String getTipo() {
+    public Tipo getTipo() {
         return tipo;
     }
 
@@ -72,7 +77,7 @@ public abstract class Animal implements ISexual {
         return raza;
     }
 
-    public String getMedio() {
+    public Medio getMedio() {
         return medio;
     }
 
@@ -101,13 +106,12 @@ public abstract class Animal implements ISexual {
     }
 
     @Override
-    public void setSexo(String sexo) {
-        if (sexo.equalsIgnoreCase("macho") || sexo.equalsIgnoreCase("hembra"))
+    public void setSexo(Sexo sexo) {
             this.sexo = sexo;
     }
 
     public boolean equalsEspecie(Animal animal) {
-        return animal.tipo.equalsIgnoreCase(this.tipo);
+        return animal.tipo == this.tipo;
     }
 
     public Optional<Animal> aparearse(Animal pareja) {
@@ -154,7 +158,7 @@ public abstract class Animal implements ISexual {
             if (this instanceof Oveja)
                 cria = new Oveja((AnimalGranja) this);
 
-            if (this.sexo.equalsIgnoreCase("hembra"))
+            if (this.sexo == Sexo.Hembra)
                 ((AnimalGranja) cria).setPropietario(((AnimalGranja) this).getPropietario());
             else ((AnimalGranja) cria).setPropietario(((AnimalGranja) pareja).getPropietario());
 
