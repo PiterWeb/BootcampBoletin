@@ -144,6 +144,7 @@ public abstract class Animal implements ISexual {
             if (cria == null) return Optional.empty();
 
             ((Mascota) cria).setNombre(((Mascota) this).getNombre() + "-" + ((Mascota) pareja).getNombre() + numeroCrias + "-jr");
+
         }
 
         if (this instanceof Vaca)
@@ -159,6 +160,7 @@ public abstract class Animal implements ISexual {
         if (cria == null) return Optional.empty();
 
         cria.setPadres(new Animal[]{this, pareja});
+        cria.setSexo(Math.random() > 0.5 ? Sexo.Macho: Sexo.Hembra);
 
         crias[numeroCrias] = cria.id;
         pareja.crias[pareja.numeroCrias] = cria.id;

@@ -55,31 +55,40 @@ public class Ej18 {
 
         animales.addAll(Arrays.asList(pezesPayaso));
 
-        for (int i = 0; i < animales.size(); i++) {
+        ArrayList<Animal> animalesTemporales;
 
-            Animal animal1 = animales.get(i);
+        for(int i = 0; i < 4; i++) {
 
-            if (animal1 == null) continue;
+            animalesTemporales = new ArrayList<Animal>();
 
-            for (int j = 0; j < animales.size(); j++) {
+            int animalesSize = animales.size();
 
-                Animal animal2 = animales.get(j);
+            for (Animal animal1 : animales) {
 
-                if (animal2 == null) continue;
+                if (animal1 == null) continue;
 
-                while (true) {
+                for (Animal animal2 : animales) {
 
-                    Optional<Animal> cria = animal1.aparearse(animal2);
+                    if (animal2 == null) continue;
 
-                    if (cria.isEmpty()) break;
+                    while (true) {
 
-                    animales.add(cria.get());
+                        Optional<Animal> cria = animal1.aparearse(animal2);
+
+                        if (cria.isEmpty()) break;
+
+                        animalesTemporales.add(cria.get());
+
+                    }
+
 
                 }
 
-
             }
 
+            animales.addAll(animalesTemporales);
+
+            if (animalesSize == animales.size()) break;
         }
 
 

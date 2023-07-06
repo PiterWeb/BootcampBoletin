@@ -59,7 +59,7 @@ public class Ej19 {
 
         ArrayList<Animal> animalesTemporales;
 
-        while (true) {
+        for(int i = 0; i < 4; i++) {
 
             animalesTemporales = new ArrayList<Animal>();
 
