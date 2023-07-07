@@ -1,5 +1,6 @@
 package org.boletin.ej19.clases;
 
+import org.boletin.ej11.clases.ITienePropietario;
 import org.boletin.ej11.clases.Tipo;
 import org.boletin.ej13.clases.*;
 import org.boletin.ej20.clases.CriaUtils;
@@ -38,8 +39,7 @@ public class CSVUtils {
 
                 linea += a.getSexo() + " ," + a.getTipo() + " ,";
 
-                if (a instanceof AnimalGranja) linea += ((AnimalGranja) a).getPropietario() + " ,";
-                else if (a instanceof Mascota) linea += ((Mascota) a).getPropietario() + " ,";
+                if (a instanceof ITienePropietario) linea += ((ITienePropietario) a).getPropietario() + " ,";
                 else linea += " ,";
 
                 linea += a.getReino() + " ," + a.getRaza() + " ," + a.getMedio() + " ,";
@@ -116,7 +116,7 @@ public class CSVUtils {
                 for (int j = 0; j < valores.length - criasPostion; j++) {
 
                     try {
-                        crias.add(Integer.parseInt(valores[j+criasPostion]));
+                        crias.add(Integer.parseInt(valores[j + criasPostion]));
                     } catch (Exception e) {
                         break;
                     }
