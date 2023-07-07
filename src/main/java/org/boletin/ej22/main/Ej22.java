@@ -1,6 +1,7 @@
 package org.boletin.ej22.main;
 
 import org.boletin.ej13.clases.*;
+import org.boletin.ej16.clases.ListaAnimales;
 import org.boletin.ej22.clases.*;
 import org.boletin.ej22.clases.Oveja;
 import org.boletin.ej22.clases.Vaca;
