@@ -1,4 +1,4 @@
-package org.boletin.ej21.clases;
+package org.boletin.ej20.clases;
 
 import org.boletin.ej13.clases.Animal;
 import org.boletin.ej13.clases.Sexo;

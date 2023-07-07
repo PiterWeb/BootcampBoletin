@@ -2,7 +2,7 @@ package org.boletin.ej24.main;
 
 import org.boletin.ej11.clases.Tipo;
 import org.boletin.ej13.clases.*;
-import org.boletin.ej21.clases.CriaUtils;
+import org.boletin.ej20.clases.CriaUtils;
 import org.json.JSONObject;
 import org.json.JSONArray;
 

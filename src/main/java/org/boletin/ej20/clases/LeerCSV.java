@@ -2,7 +2,6 @@ package org.boletin.ej20.clases;
 
 import org.boletin.ej11.clases.Tipo;
 import org.boletin.ej13.clases.*;
-import org.boletin.ej21.clases.CriaUtils;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
