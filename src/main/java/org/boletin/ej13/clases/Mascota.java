@@ -49,5 +49,4 @@ public abstract class Mascota extends Animal implements ITienePropietario {
     public String toString() {
         return super.toString() + " { propietario : " + propietario + ", nombre : " + nombre + " }";
     }
-
 }

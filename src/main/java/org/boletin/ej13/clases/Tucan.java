@@ -18,8 +18,8 @@ public class Tucan extends AnimalSalvaje {
         System.out.println("Volar");
     }
 
-    public Tucan instanciarCria(Tucan Progenitor) {
-        return new Tucan(Progenitor);
+    public Animal instanciarCria(Animal progenitor) {
+        return new Tucan((AnimalSalvaje) progenitor);
     }
     @Override
     public void reproducirSonido() {

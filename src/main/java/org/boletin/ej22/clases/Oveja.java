@@ -3,6 +3,7 @@ package org.boletin.ej22.clases;
 import org.boletin.ej11.clases.Medio;
 import org.boletin.ej11.clases.Reino;
 import org.boletin.ej11.clases.Tipo;
+import org.boletin.ej13.clases.Animal;
 import org.boletin.ej13.clases.Sexo;
 
 public class Oveja extends AnimalGranja {
@@ -15,6 +16,9 @@ public class Oveja extends AnimalGranja {
         super(animalGranja);
     }
 
+    public Animal instanciarCria(Animal progenitor) {
+        return new Oveja((AnimalGranja) progenitor);
+    }
     @Override
     public void desplazarse() {
         System.out.println("Caminar");

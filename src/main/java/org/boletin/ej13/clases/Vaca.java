@@ -13,8 +13,8 @@ public class Vaca extends AnimalGranja {
         super(animalGranja);
     }
 
-    public Vaca instanciarCria(Vaca Progenitor) {
-        return new Vaca(Progenitor);
+    public Animal instanciarCria(Animal progenitor) {
+        return new Vaca((AnimalGranja) progenitor);
     }
     @Override
     public void desplazarse() {

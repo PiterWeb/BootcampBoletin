@@ -14,8 +14,8 @@ public class Oveja extends AnimalGranja {
         super(animalGranja);
     }
 
-    public Oveja instanciarCria(Oveja Progenitor) {
-        return new Oveja(Progenitor);
+    public Animal instanciarCria(Animal progenitor) {
+        return new Oveja((AnimalGranja) progenitor);
     }
 
     @Override

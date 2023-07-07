@@ -12,9 +12,9 @@ public class Perro extends Mascota {
         super(mascota);
     }
 
-    public Perro instanciarCria(Perro progenitor) {
+    public Animal instanciarCria(Animal progenitor) {
         Perro cria = new Perro(this);
-        cria.setNombre(getNombre() + "-" + progenitor.getNombre() + numeroCriasConPareja(progenitor) + "-jr");
+        cria.setNombre(getNombre() + "-" + ((Mascota)progenitor).getNombre() + numeroCriasConPareja(progenitor) + "-jr");
         return cria;
     }
 

@@ -156,34 +156,15 @@ public abstract class Animal implements ISexual {
 
     }
 
+    public abstract Animal instanciarCria(Animal progenitor);
+
     public Optional<Animal> aparearse(Animal pareja) {
 
         if (!puedenCriar(pareja)) return Optional.empty();
 
         Animal cria = null;
 
-        if (this instanceof Mascota) {
-            if (this instanceof Perro)
-                cria = new Perro((Mascota) this);
-
-            if (this instanceof Gato)
-                cria = new Gato((Mascota) this);
-
-            if (cria == null) return Optional.empty();
-
-            ((Mascota) cria).setNombre(((Mascota) this).getNombre() + "-" + ((Mascota) pareja).getNombre() + numeroCrias + "-jr");
-
-        }
-
-        if (this instanceof Vaca)
-            cria = new Vaca((AnimalGranja) this);
-        if (this instanceof Oveja)
-            cria = new Oveja((AnimalGranja) this);
-
-        if (this instanceof Tucan)
-            cria = new Tucan((AnimalSalvaje) this);
-        if (this instanceof PezPayaso)
-            cria = new PezPayaso((AnimalSalvaje) this);
+        cria = instanciarCria(pareja);
 
         if (cria == null) return Optional.empty();
 

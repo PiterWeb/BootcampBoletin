@@ -18,8 +18,8 @@ public class PezPayaso extends AnimalSalvaje {
         System.out.println("Nadar");
     }
 
-    public PezPayaso instanciarCria(PezPayaso Progenitor) {
-        return new PezPayaso(Progenitor);
+    public Animal instanciarCria(Animal progenitor) {
+        return new PezPayaso((AnimalSalvaje) progenitor);
     }
 
     @Override
