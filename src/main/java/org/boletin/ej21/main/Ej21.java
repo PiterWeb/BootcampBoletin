@@ -39,7 +39,7 @@ public class Ej21 {
                 System.out.println(antepasado);
             }
 
-            char c = Input.character("Introduzca una \"s\" para salir");
+            char c = Input.character("Introduzca una \"s\" para salir o una otra letra cualquiera para continuar");
 
             if (c == 's' || c == 'S') break;
 

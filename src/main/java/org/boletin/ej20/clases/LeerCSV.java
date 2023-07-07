@@ -42,17 +42,19 @@ public class LeerCSV {
 
                 ArrayList<Integer> crias = new ArrayList<>();
 
-                for (int j = 0; j < valores.length - 9; j++) {
+                final int criasPostion = 11;
+
+                for (int j = 0; j < valores.length - criasPostion; j++) {
 
                     try {
-                        crias.add(Integer.parseInt(valores[j+9]));
+                        crias.add(Integer.parseInt(valores[j+criasPostion]));
                     } catch (Exception e) {
                         break;
                     }
 
                 }
 
-                int ncrias = Integer.parseInt(valores[8]);
+                int ncrias = Integer.parseInt(valores[criasPostion - 1]);
 
                 Animal animal = null;
 

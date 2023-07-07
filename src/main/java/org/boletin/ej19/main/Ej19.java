@@ -54,7 +54,7 @@ public class Ej19 {
         try {
             PrintWriter pw = new PrintWriter("animales.csv");
 
-            pw.print("ID ,NOMBRE ,SEXO ,TIPO, PROPIETARIO,REINO, RAZA, MEDIO, NCRIAS, ");
+            pw.print("ID ,NOMBRE ,SEXO ,TIPO, PROPIETARIO,REINO, RAZA, MEDIO, PADRE, MADRE ,NCRIAS, ");
 
             int maxCria = animales.stream().mapToInt(Animal::getNumeroCrias).max().orElse(-1);
 
@@ -81,6 +81,11 @@ public class Ej19 {
                 else linea += " ,";
 
                 linea += a.getReino() + " ," + a.getRaza() + " ," + a.getMedio() + " ,";
+                if (a.getMadre() != null && a.getPadre() != null)
+                    linea += a.getPadre().getId() + " ," + a.getMadre().getId() + " ,";
+                else
+                    linea += ",,";
+
                 linea += a.getNumeroCrias() + " ,";
 
                 for (int i = 0; i < a.getNumeroCrias(); i++) {

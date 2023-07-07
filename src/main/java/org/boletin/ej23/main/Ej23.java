@@ -7,7 +7,6 @@ import org.boletin.ej16.clases.ListaAnimales;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Optional;
 
 public class Ej23 {
@@ -84,6 +83,14 @@ public class Ej23 {
                 linea += "\"reino\": \"" + a.getReino() + sigProp + "\"raza\": \"" + a.getRaza() + sigProp + "\"medio\": \"" + a.getMedio() + sigProp;
 
                 linea += "\"numero_crias\": " + a.getNumeroCrias() + ",\n";
+
+                if (a.getPadre() != null && a.getMadre() != null) {
+                    linea += "\"padre\": " + a.getPadre().getId() + ",\n";
+                    linea += "\"madre\": " + a.getMadre().getId() + ",\n";
+                } else {
+                    linea += "\"padre\": " + null + ",\n";
+                    linea += "\"madre\": " + null + ",\n";
+                }
 
                 linea += "\"crias\": [\n";
 
