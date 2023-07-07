@@ -14,8 +14,8 @@ public abstract class AnimalGranja extends Animal implements ITienePropietario {
         this.propietario = propietario;
     }
 
-    public AnimalGranja(Reino reino, Tipo tipo, String raza, Medio medio, String propietario) {
-        super(reino, tipo, raza, medio);
+    public AnimalGranja(Reino reino, Tipo tipo, String raza, Medio medio, String propietario, Sexo sexo) {
+        super(reino, tipo, raza, medio, sexo);
         this.propietario = propietario;
     }
 

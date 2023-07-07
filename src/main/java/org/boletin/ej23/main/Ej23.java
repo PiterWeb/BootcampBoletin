@@ -1,7 +1,7 @@
 package org.boletin.ej23.main;
 
-import org.boletin.ej14.clases.Sexo;
-import org.boletin.ej22.clases.*;
+
+import org.boletin.ej13.clases.*;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -14,47 +14,45 @@ public class Ej23 {
 
     public static void main(String[] args) {
 
-        Perro perroMacho = new Perro("Boxer", "Piplo", "Manolo", Sexo.Macho);
-        Perro perroHembra = new Perro("Pug", "Dori", "Pedro", Sexo.Hembra);
+        Perro perroMacho = new Perro("Boxer", "Piplo", "Manolo", Sexo.MACHO);
+        Perro perroHembra = new Perro("Pug", "Dori", "Pedro", Sexo.HEMBRA);
 
         Perro[] perros = new Perro[]{perroHembra, perroMacho};
 
         animales.addAll(Arrays.asList(perros));
 
-        Gato gatoMacho = new Gato("Siames", "Trosky", "Pedro", Sexo.Macho);
-        Gato gatoHembra = new Gato("Egipcio", "Olga", "Manolo", Sexo.Hembra);
+        Gato gatoMacho = new Gato("Siames", "Trosky", "Pedro", Sexo.MACHO);
+        Gato gatoHembra = new Gato("Egipcio", "Olga", "Manolo", Sexo.HEMBRA);
 
         Gato[] gatos = new Gato[]{gatoHembra, gatoMacho};
 
         animales.addAll(Arrays.asList(gatos));
 
-        Granjero manolo = new Granjero("Manolo");
-        Granjero pedro = new Granjero("Pedro");
 
-        Vaca vacaMacho = new Vaca("Gallega", manolo, Sexo.Macho);
-        Vaca vacaHembra = new Vaca("Astuariana", pedro, Sexo.Hembra);
-        Vaca vacaOtro = new Vaca("Vasca", pedro, Sexo.Hembra);
+        Vaca vacaMacho = new Vaca("Gallega", "Manolo", Sexo.MACHO);
+        Vaca vacaHembra = new Vaca("Astuariana", "Pedro", Sexo.HEMBRA);
+        Vaca vacaOtro = new Vaca("Vasca", "Pedro", Sexo.HEMBRA);
 
         Vaca[] vacas = new Vaca[]{vacaHembra, vacaMacho, vacaOtro};
 
         animales.addAll(Arrays.asList(vacas));
 
-        Tucan tucanMacho = new Tucan("Azul", Sexo.Macho);
-        Tucan tucanHembra = new Tucan("Rojo", Sexo.Hembra);
+        Tucan tucanMacho = new Tucan("Azul", Sexo.MACHO);
+        Tucan tucanHembra = new Tucan("Rojo", Sexo.HEMBRA);
 
         Tucan[] tucanes = new Tucan[]{tucanHembra, tucanMacho};
 
         animales.addAll(Arrays.asList(tucanes));
 
-        Oveja ovejaMacho = new Oveja("Gallega", pedro, Sexo.Macho);
-        Oveja ovejaHembra = new Oveja("Vasca", manolo, Sexo.Hembra);
+        Oveja ovejaMacho = new Oveja("Gallega", "Pedro", Sexo.MACHO);
+        Oveja ovejaHembra = new Oveja("Vasca", "Manolo", Sexo.HEMBRA);
 
         Oveja[] ovejas = new Oveja[]{ovejaHembra, ovejaMacho};
 
         animales.addAll(Arrays.asList(ovejas));
 
-        PezPayaso pezPayasoMacho = new PezPayaso("atlantico", Sexo.Macho);
-        PezPayaso pezPayasoHembra = new PezPayaso("pacífico", Sexo.Hembra);
+        PezPayaso pezPayasoMacho = new PezPayaso("atlantico", Sexo.MACHO);
+        PezPayaso pezPayasoHembra = new PezPayaso("pacífico", Sexo.HEMBRA);
 
         PezPayaso[] pezesPayaso = new PezPayaso[]{pezPayasoHembra, pezPayasoMacho};
 
@@ -62,7 +60,7 @@ public class Ej23 {
 
         ArrayList<Animal> animalesTemporales;
 
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 3; i++) {
 
             animalesTemporales = new ArrayList<Animal>();
 
@@ -125,22 +123,22 @@ public class Ej23 {
                 else if (a instanceof Mascota)
                     linea += "\"propietario\": \"" + ((Mascota) a).getPropietario() + sigProp;
 
-                int cria1 = a.getCrias()[0];
-                int cria2 = a.getCrias()[1];
-                int cria3 = a.getCrias()[2];
-
                 linea += "\"reino\": \"" + a.getReino() + sigProp + "\"raza\": \"" + a.getRaza() + sigProp + "\"medio\": \"" + a.getMedio() + sigProp;
 
                 linea += "\"numero_crias\": " + a.getNumeroCrias() + ",\n";
 
                 linea += "\"crias\": [\n";
 
-                if (cria1 != -1)
-                    linea += "\t" + cria1 + ",\n";
-                if (cria2 != 1)
-                    linea += "\t" + cria2 + ",\n";
-                if (cria3 != 1)
-                    linea += "\t" + cria3 + "\n";
+                for (int j = 0; j < a.getNumeroCrias(); j++) {
+
+                    int cria = a.getCrias().get(j);
+
+                    if (j + 1 == a.getNumeroCrias())
+                        linea += "\t" + cria + "\n";
+                    else linea += "\t" + cria + ",\n";
+
+                }
+
 
                 linea += "]\n";
 

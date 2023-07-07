@@ -11,6 +11,12 @@ public class Mascota extends Animal implements ITienePropietario {
         this.propietario = propietario;
     }
 
+    public Mascota(Tipo tipo, String raza, String nombre, String propietario) {
+        super(Reino.Mamifero, tipo, raza, Medio.Terreno);
+        this.nombre = nombre;
+        this.propietario = propietario;
+    }
+
     public String getNombre() {
         return nombre;
     }

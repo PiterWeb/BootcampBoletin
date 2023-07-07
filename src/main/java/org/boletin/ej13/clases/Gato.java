@@ -6,11 +6,17 @@ import org.boletin.ej11.clases.Tipo;
 
 public class Gato extends Mascota {
 
-    public Gato(String raza, String nombre, String propietario) {
-        super(Reino.Mamifero, Tipo.Gato,raza, Medio.Terreno,nombre,propietario);
+    public Gato(String raza, String nombre, String propietario, Sexo sexo) {
+        super(Reino.Mamifero, Tipo.GATO,raza, Medio.Terreno,nombre,propietario, sexo);
     }
     public Gato(Mascota mascota) {
         super(mascota);
+    }
+
+    public Gato instanciarCria(Gato progenitor) {
+        Gato cria = new Gato(this);
+        cria.setNombre(getNombre() + "-" + progenitor.getNombre() + numeroCriasConPareja(progenitor));
+        return cria;
     }
 
     @Override

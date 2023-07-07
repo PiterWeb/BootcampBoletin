@@ -9,7 +9,7 @@ public class Ej12 {
 
     public static void main(String[] args) {
 
-        Animal gato = new Animal(Reino.Mamifero, Tipo.Gato, "Siames", Medio.Terreno);
+        Animal gato = new Animal(Reino.Mamifero, Tipo.GATO, "Siames", Medio.Terreno);
         System.out.println(gato);
 
         System.out.println(gato.clone());
@@ -20,13 +20,13 @@ public class Ej12 {
 
         System.out.println(gatoMascota);
 
-        Animal vaca = new Animal(Reino.Mamifero, Tipo.Vaca, "Gallega", Medio.Terreno);
+        Animal vaca = new Animal(Reino.Mamifero, Tipo.VACA, "Gallega", Medio.Terreno);
 
         Vaca vacaGranja = new Vaca(new AnimalGranja(vaca, "Pedro"));
 
         System.out.println(vacaGranja);
 
-        Tucan tucan = new Tucan(new AnimalSalvaje(new Animal(Reino.Ave, Tipo.Tucan, "Rojo", Medio.Aereo)));
+        Tucan tucan = new Tucan(new AnimalSalvaje(new Animal(Reino.Ave, Tipo.TUCAN, "Rojo", Medio.Aereo)));
 
         System.out.println(tucan);
 

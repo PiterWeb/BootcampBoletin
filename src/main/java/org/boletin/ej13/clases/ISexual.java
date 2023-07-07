@@ -1,4 +1,4 @@
-package org.boletin.ej14.clases;
+package org.boletin.ej13.clases;
 
 public interface ISexual {
 

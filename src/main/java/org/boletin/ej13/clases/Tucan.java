@@ -6,8 +6,8 @@ import org.boletin.ej11.clases.Tipo;
 
 public class Tucan extends AnimalSalvaje {
 
-    public Tucan(String raza) {
-        super(Reino.Ave, Tipo.Tucan,raza, Medio.Aereo);
+    public Tucan(String raza, Sexo sexo) {
+        super(Reino.Ave, Tipo.TUCAN,raza, Medio.Aereo, sexo);
     }
     public Tucan(AnimalSalvaje animalSalvaje) {
         super(animalSalvaje);
@@ -18,6 +18,9 @@ public class Tucan extends AnimalSalvaje {
         System.out.println("Volar");
     }
 
+    public Tucan instanciarCria(Tucan Progenitor) {
+        return new Tucan(Progenitor);
+    }
     @Override
     public void reproducirSonido() {
         System.out.println("Pio pio");

@@ -6,12 +6,16 @@ import org.boletin.ej11.clases.Tipo;
 
 public class Oveja extends AnimalGranja {
 
-    public Oveja(String raza, String propietario) {
-        super(Reino.Mamifero, Tipo.Oveja, raza, Medio.Terreno, propietario);
+    public Oveja(String raza, String propietario, Sexo sexo) {
+        super(Reino.Mamifero, Tipo.OVEJA, raza, Medio.Terreno, propietario, sexo);
     }
 
     public Oveja(AnimalGranja animalGranja) {
         super(animalGranja);
+    }
+
+    public Oveja instanciarCria(Oveja Progenitor) {
+        return new Oveja(Progenitor);
     }
 
     @Override

@@ -1,5 +1,10 @@
 package org.boletin.ej15.main;
 
+import org.boletin.ej11.clases.Tipo;
+import org.boletin.ej13.clases.Animal;
+import org.boletin.ej13.clases.AnimalGranja;
+import org.boletin.ej13.clases.AnimalSalvaje;
+import org.boletin.ej13.clases.Mascota;
 import org.boletin.ej14.clases.*;
 
 import java.util.HashMap;
@@ -7,56 +12,36 @@ import java.util.Map;
 
 public class Ej15 {
 
-    public static HashMap<String, AnimalSalvaje[]> parejasSalvajes = new HashMap<String, AnimalSalvaje[]>();
-    public static HashMap<String, Mascota[]> parejasMascotas = new HashMap<String, Mascota[]>();
-    public static HashMap<String, AnimalGranja[]> parejasGranja = new HashMap<String, AnimalGranja[]>();
+    public static HashMap<Tipo, AnimalSalvaje[]> parejasSalvajes = new HashMap<>();
+    public static HashMap<Tipo, Mascota[]> parejasMascotas = new HashMap<>();
+    public static HashMap<Tipo, AnimalGranja[]> parejasGranja = new HashMap<>();
 
     public static void main(String[] args) {
 
-        Perro perroMacho = new Perro("Boxer", "Piplo", "Manolo", Sexo.Macho);
-        Perro perroHembra = new Perro("Pug", "Dori", "Pedro", Sexo.Hembra);
+        HashMap<Tipo, Animal[]> parejas = new HashMap<>(ParejasAnimales.getLista());
 
-        Perro[] perros = new Perro[]{perroHembra, perroMacho};
+        for (Map.Entry<Tipo, Animal[]> parejaEntry: parejas.entrySet()) {
 
-        parejasMascotas.put("Perros", perros);
+            Tipo tipo = parejaEntry.getKey();
+            Animal[] pareja = parejaEntry.getValue();
 
-        Gato gatoMacho = new Gato("Siames", "Trosky", "Pedro", Sexo.Macho);
-        Gato gatoHembra = new Gato("Egipcio", "Olga", "Manolo", Sexo.Hembra);
+            if (pareja.length == 0) continue;
 
-        Gato[] gatos = new Gato[]{gatoHembra, gatoMacho};
+            if (pareja[0] == null || pareja[1] == null) continue;
 
-        parejasMascotas.put("Gatos", gatos);
+            if (pareja[0] instanceof AnimalSalvaje)
+                parejasSalvajes.put(tipo, (AnimalSalvaje[]) pareja);
 
-        Vaca vacaMacho = new Vaca("Gallega", "Manolo", Sexo.Macho);
-        Vaca vacaHembra = new Vaca("Astuariana", "Pedro", Sexo.Hembra);
+            if (pareja[0] instanceof AnimalGranja)
+                parejasGranja.put(tipo, ((AnimalGranja[]) pareja));
 
-        Vaca[] vacas = new Vaca[]{vacaHembra, vacaMacho};
+            if (pareja[0] instanceof Mascota)
+                parejasMascotas.put(tipo, ((Mascota[]) pareja));
 
-        parejasGranja.put("Vacas", vacas);
-
-        Tucan tucanMacho = new Tucan("Azul", Sexo.Macho);
-        Tucan tucanHembra = new Tucan("Rojo", Sexo.Hembra);
-
-        Tucan[] tucanes = new Tucan[]{tucanHembra, tucanMacho};
-
-        parejasSalvajes.put("Tucanes", tucanes);
-
-        Oveja ovejaMacho = new Oveja("Gallega", "Pedro", Sexo.Macho);
-        Oveja ovejaHembra = new Oveja("Vasca", "Manolo", Sexo.Hembra);
-
-        Oveja[] ovejas = new Oveja[]{ovejaHembra, ovejaMacho};
-
-        parejasGranja.put("Ovejas", ovejas);
-
-        PezPayaso pezPayasoMacho = new PezPayaso("atlantico", Sexo.Macho);
-        PezPayaso pezPayasoHembra = new PezPayaso("pacífico", Sexo.Hembra);
-
-        PezPayaso[] pezesPayaso = new PezPayaso[]{pezPayasoHembra, pezPayasoMacho};
-
-        parejasSalvajes.put("Pezes payaso", pezesPayaso);
+        }
 
         System.out.println("[Parejas Salvajes]");
-        for (Map.Entry<String, AnimalSalvaje[]> pareja: parejasSalvajes.entrySet()) {
+        for (Map.Entry<Tipo, AnimalSalvaje[]> pareja: parejasSalvajes.entrySet()) {
 
             System.out.println("---" + pareja.getKey() + "---");
 
@@ -66,7 +51,7 @@ public class Ej15 {
         }
 
         System.out.println("[Parejas Mascotas]");
-        for (Map.Entry<String, Mascota[]> pareja: parejasMascotas.entrySet()) {
+        for (Map.Entry<Tipo, Mascota[]> pareja: parejasMascotas.entrySet()) {
 
             System.out.println("---" + pareja.getKey() + "---");
 
@@ -76,7 +61,7 @@ public class Ej15 {
         }
 
         System.out.println("[Parejas Granja]");
-        for (Map.Entry<String, AnimalGranja[]> pareja: parejasGranja.entrySet()) {
+        for (Map.Entry<Tipo, AnimalGranja[]> pareja: parejasGranja.entrySet()) {
 
             System.out.println("---" + pareja.getKey() + "---");
 
