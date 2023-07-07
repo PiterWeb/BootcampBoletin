@@ -13,43 +13,7 @@ public class Ej23 {
 
     public static void main(String[] args) {
 
-        ArrayList<Animal> animales = ListaAnimales.getLista();
-
-        ArrayList<Animal> animalesTemporales;
-
-        for (int i = 0; i < 3; i++) {
-
-            animalesTemporales = new ArrayList<Animal>();
-
-            int animalesSize = animales.size();
-
-            for (Animal animal1 : animales) {
-
-                if (animal1 == null) continue;
-
-                for (Animal animal2 : animales) {
-
-                    if (animal2 == null) continue;
-
-                    while (true) {
-
-                        Optional<Animal> cria = animal1.aparearse(animal2);
-
-                        if (cria.isEmpty()) break;
-
-                        animalesTemporales.add(cria.get());
-
-                    }
-
-
-                }
-
-            }
-
-            animales.addAll(animalesTemporales);
-
-            if (animalesSize == animales.size()) break;
-        }
+        final ArrayList<Animal> animales = ListaAnimales.reproducirAnimales();
 
         for (Animal a : animales) System.out.println(a);
 

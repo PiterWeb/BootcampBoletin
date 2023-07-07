@@ -1,20 +1,16 @@
-package org.boletin.ej17.main;
+package org.boletin.ej25.main;
 
-import org.boletin.ej13.clases.*;
+import org.boletin.ej13.clases.Animal;
 import org.boletin.ej16.clases.ListaAnimales;
-
 
 import java.util.ArrayList;
 import java.util.Optional;
 
-public class Ej17 {
+public class Ej25 {
 
     public static void main(String[] args) {
 
         final ArrayList<Animal> animales = ListaAnimales.reproducirAnimales();
-
-        for (Animal a : animales)
-            System.out.println(a);
 
     }
 

@@ -4,10 +4,12 @@ import org.boletin.ej13.clases.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Optional;
 
 public class ListaAnimales {
 
     private static ArrayList<Animal> animales = new ArrayList<>();
+
     public static ArrayList<Animal> getLista() {
         Perro perroMacho = new Perro("Boxer", "Piplo", "Manolo", Sexo.MACHO);
         Perro perroHembra = new Perro("Pug", "Dori", "Pedro", Sexo.HEMBRA);
@@ -53,5 +55,59 @@ public class ListaAnimales {
         animales.addAll(Arrays.asList(pezesPayaso));
 
         return animales;
+    }
+
+    public static ArrayList<Animal> reproducirAnimales(ArrayList<Animal> listaAnimales, int repeticiones) {
+
+        ArrayList<Animal> animales2 = new ArrayList<>(listaAnimales);
+
+        ArrayList<Animal> animalesTemporales;
+
+        for (int i = 0; i < repeticiones; i++) {
+
+            animalesTemporales = new ArrayList<Animal>();
+
+            int animalesSize = animales2.size();
+
+            for (Animal animal1 : animales2) {
+
+                if (animal1 == null) continue;
+
+                for (Animal animal2 : animales2) {
+
+                    if (animal2 == null) continue;
+
+                    while (true) {
+
+                        Optional<Animal> cria = animal1.aparearse(animal2);
+
+                        if (cria.isEmpty()) break;
+
+                        animalesTemporales.add(cria.get());
+
+                    }
+
+
+                }
+
+            }
+
+            animales2.addAll(animalesTemporales);
+
+            if (animalesSize == animales2.size()) break;
+        }
+
+        return animales2;
+
+    }
+
+    public static ArrayList<Animal> reproducirAnimales(int repeticiones) {
+
+        return reproducirAnimales(getLista(), repeticiones);
+
+    }
+
+    public static ArrayList<Animal> reproducirAnimales() {
+        return  reproducirAnimales(3);
     }
 }
