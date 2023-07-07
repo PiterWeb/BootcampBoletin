@@ -37,8 +37,8 @@ public class Ej24 {
 
                 int id = animalJSON.getInt("id");
 
-                Tipo tipo = animalJSON.getEnum(Tipo.class,"tipo");
-                Sexo sexo = animalJSON.getEnum(Sexo.class,"sexo");
+                Tipo tipo = animalJSON.getEnum(Tipo.class, "tipo");
+                Sexo sexo = animalJSON.getEnum(Sexo.class, "sexo");
                 String raza = animalJSON.getString("raza");
                 JSONArray criasJSON = animalJSON.getJSONArray("crias");
                 int nCrias = animalJSON.getInt("numero_crias");
@@ -51,35 +51,27 @@ public class Ej24 {
 
                 Animal animal = null;
 
-                boolean esMascota = animalJSON.has("propietario") && animalJSON.has("nombre");
-                boolean esDeGranja = animalJSON.has("propietario");
+                boolean tienePropietario = animalJSON.has("propietario");
+                boolean esMascota = tienePropietario && animalJSON.has("nombre");
 
                 if (tipo == Tipo.GATO && esMascota) {
                     String propietario = animalJSON.getString("propietario");
                     String nombre = animalJSON.getString("nombre");
                     animal = new Gato(raza, nombre, propietario, sexo);
-                }
-
-                if (tipo == Tipo.PERRO && esMascota) {
+                } else if (tipo == Tipo.PERRO && esMascota) {
                     String propietario = animalJSON.getString("propietario");
                     String nombre = animalJSON.getString("nombre");
                     animal = new Gato(raza, nombre, propietario, sexo);
-                }
-
-                if (tipo == Tipo.VACA && esDeGranja) {
+                } else if (tipo == Tipo.VACA && tienePropietario) {
                     String propietario = animalJSON.getString("propietario");
                     animal = new Vaca(raza, propietario, sexo);
-                }
-
-                if (tipo == Tipo.OVEJA && esDeGranja) {
+                } else if (tipo == Tipo.OVEJA && tienePropietario) {
                     String propietario = animalJSON.getString("propietario");
                     animal = new Oveja(raza, propietario, sexo);
-                }
-
-                if (tipo == Tipo.TUCAN)
+                } else if (tipo == Tipo.TUCAN)
                     animal = new Tucan(raza, sexo);
 
-                if (tipo == Tipo.PEZ_PAYASO)
+                else if (tipo == Tipo.PEZ_PAYASO)
                     animal = new PezPayaso(raza, sexo);
 
                 if (animal == null) continue;
@@ -113,7 +105,6 @@ public class Ej24 {
 
 
     }
-
 
 
 }
