@@ -1,7 +1,7 @@
 package org.boletin.ej20.main;
 
 import org.boletin.ej13.clases.*;
-import org.boletin.ej20.clases.LeerCSV;
+import org.boletin.ej19.clases.CSVUtils;
 
 import java.util.ArrayList;
 
@@ -11,7 +11,7 @@ public class Ej20 {
 
     public static void main(String[] args) {
 
-        animales.addAll(LeerCSV.obtenerAnimales());
+        animales.addAll(CSVUtils.obtenerAnimales());
 
         for (Animal a : animales) System.out.println(a);
 

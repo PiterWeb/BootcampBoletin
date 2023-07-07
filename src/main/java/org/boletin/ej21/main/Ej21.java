@@ -1,7 +1,7 @@
 package org.boletin.ej21.main;
 
 import org.boletin.ej13.clases.*;
-import org.boletin.ej20.clases.LeerCSV;
+import org.boletin.ej19.clases.CSVUtils;
 import org.campusdual.util.Input;
 
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ public class Ej21 {
 
     public static void main(String[] args) {
 
-        animales.addAll(LeerCSV.obtenerAnimales());
+        animales.addAll(CSVUtils.obtenerAnimales());
 
         while (true) {
 

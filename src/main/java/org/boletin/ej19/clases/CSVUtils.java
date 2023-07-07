@@ -1,17 +1,85 @@
-package org.boletin.ej20.clases;
+package org.boletin.ej19.clases;
 
 import org.boletin.ej11.clases.Tipo;
 import org.boletin.ej13.clases.*;
+import org.boletin.ej20.clases.CriaUtils;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
-public class LeerCSV {
+public class CSVUtils {
 
-    private static ArrayList<Animal> animales = new ArrayList<>();
+    public static void escribirAnimales(ArrayList<Animal> animales) {
+        try {
+            PrintWriter pw = new PrintWriter("animales.csv");
+
+            pw.print("ID ,NOMBRE ,SEXO ,TIPO, PROPIETARIO,REINO, RAZA, MEDIO, PADRE, MADRE ,NCRIAS, ");
+
+            int maxCria = animales.stream().mapToInt(org.boletin.ej13.clases.Animal::getNumeroCrias).max().orElse(-1);
+
+            for (int i = 1; i <= maxCria; i++) {
+                if (i == maxCria)
+                    pw.print("CRIA_" + i);
+                else
+                    pw.print("CRIA_" + i + ",");
+            }
+            pw.println();
+
+            String linea = "";
+
+            for (Animal a : animales) {
+
+                linea += a.getId() + " ,";
+                if (a instanceof Mascota) linea += (((Mascota) a).getNombre()) + " ,";
+                else linea += " ,";
+
+                linea += a.getSexo() + " ," + a.getTipo() + " ,";
+
+                if (a instanceof AnimalGranja) linea += ((AnimalGranja) a).getPropietario() + " ,";
+                else if (a instanceof Mascota) linea += ((Mascota) a).getPropietario() + " ,";
+                else linea += " ,";
+
+                linea += a.getReino() + " ," + a.getRaza() + " ," + a.getMedio() + " ,";
+                if (a.getMadre() != null && a.getPadre() != null)
+                    linea += a.getPadre().getId() + " ," + a.getMadre().getId() + " ,";
+                else
+                    linea += ",,";
+
+                linea += a.getNumeroCrias() + " ,";
+
+                for (int i = 0; i < a.getNumeroCrias(); i++) {
+
+                    int cria = a.getCrias().get(i);
+
+                    if (i + 1 == a.getNumeroCrias())
+                        linea += cria;
+                    else
+                        linea += cria + " ,";
+
+                }
+
+
+                pw.println(linea);
+
+                linea = "";
+
+            }
+
+            pw.close();
+
+        } catch (FileNotFoundException err) {
+            err.printStackTrace();
+            System.out.println("No se puede escribir en el archivo csv");
+        }
+    }
 
     public static ArrayList<Animal> obtenerAnimales() {
+
+        ArrayList<Animal> animales = new ArrayList<>();
+
         BufferedReader br = null;
 
         try {
@@ -38,6 +106,8 @@ public class LeerCSV {
                 //String reino = valores[5];
                 String raza = valores[6];
                 //String medio = valores[7];
+                //String padreId = valores[8];
+                //String madreId = valores[9];
 
                 ArrayList<Integer> crias = new ArrayList<>();
 
@@ -53,7 +123,7 @@ public class LeerCSV {
 
                 }
 
-                int ncrias = Integer.parseInt(valores[criasPostion - 1]);
+                int nCrias = Integer.parseInt(valores[criasPostion - 1]);
 
                 Animal animal = null;
 
@@ -67,7 +137,7 @@ public class LeerCSV {
                         animal = new Gato(raza, nombre, propietario, sexo);
 
                     if (animal != null) {
-                        animal.setNumeroCrias(ncrias);
+                        animal.setNumeroCrias(nCrias);
                         animal.setCrias(crias);
                         animal.setId(id);
                         animales.add(animal);
@@ -85,7 +155,7 @@ public class LeerCSV {
                         animal = new Oveja(raza, propietario, sexo);
 
                     if (animal != null) {
-                        animal.setNumeroCrias(ncrias);
+                        animal.setNumeroCrias(nCrias);
                         animal.setCrias(crias);
                         animal.setId(id);
                         animales.add(animal);
@@ -101,7 +171,7 @@ public class LeerCSV {
                     animal = new PezPayaso(raza, sexo);
 
                 if (animal != null) {
-                    animal.setNumeroCrias(ncrias);
+                    animal.setNumeroCrias(nCrias);
                     animal.setCrias(crias);
                     animal.setId(id);
                     animales.add(animal);
@@ -128,5 +198,4 @@ public class LeerCSV {
 
         return animales;
     }
-
 }
