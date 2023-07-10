@@ -10,6 +10,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.stream.Collectors;
 
 public class CSVUtils {
 
@@ -37,10 +39,10 @@ public class CSVUtils {
                 if (a instanceof Mascota) linea += (((Mascota) a).getNombre()) + ",";
                 else linea += ",";
 
-                linea += a.getSexo() + "," + a.getTipo() + " ,";
+                linea += a.getSexo() + "," + a.getTipo() + ",";
 
                 if (a instanceof ITienePropietario) linea += ((ITienePropietario) a).getPropietario() + ",";
-                else linea += " ,";
+                else linea += ",";
 
                 linea += a.getReino() + "," + a.getRaza() + "," + a.getMedio() + ",";
                 if (a.getMadre() != null && a.getPadre() != null)
@@ -96,7 +98,7 @@ public class CSVUtils {
                     continue;
                 }
 
-                String[] valores = linea.trim().split(",");
+                String[] valores = Arrays.stream(linea.split(",")).map(String::trim).toArray(String[]::new);
 
                 int id = Integer.parseInt(valores[0]);
                 String nombre = valores[1];
