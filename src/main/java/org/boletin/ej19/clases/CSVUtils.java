@@ -17,7 +17,7 @@ public class CSVUtils {
         try {
             PrintWriter pw = new PrintWriter("animales.csv");
 
-            pw.print("ID ,NOMBRE ,SEXO ,TIPO, PROPIETARIO,REINO, RAZA, MEDIO, PADRE, MADRE ,NCRIAS, ");
+            pw.print("ID,NOMBRE,SEXO,TIPO,PROPIETARIO,REINO,RAZA,MEDIO,PADRE,MADRE,NCRIAS,");
 
             int maxCria = animales.stream().mapToInt(org.boletin.ej13.clases.Animal::getNumeroCrias).max().orElse(-1);
 
@@ -33,22 +33,22 @@ public class CSVUtils {
 
             for (Animal a : animales) {
 
-                linea += a.getId() + " ,";
-                if (a instanceof Mascota) linea += (((Mascota) a).getNombre()) + " ,";
+                linea += a.getId() + ",";
+                if (a instanceof Mascota) linea += (((Mascota) a).getNombre()) + ",";
+                else linea += ",";
+
+                linea += a.getSexo() + "," + a.getTipo() + " ,";
+
+                if (a instanceof ITienePropietario) linea += ((ITienePropietario) a).getPropietario() + ",";
                 else linea += " ,";
 
-                linea += a.getSexo() + " ," + a.getTipo() + " ,";
-
-                if (a instanceof ITienePropietario) linea += ((ITienePropietario) a).getPropietario() + " ,";
-                else linea += " ,";
-
-                linea += a.getReino() + " ," + a.getRaza() + " ," + a.getMedio() + " ,";
+                linea += a.getReino() + "," + a.getRaza() + "," + a.getMedio() + ",";
                 if (a.getMadre() != null && a.getPadre() != null)
-                    linea += a.getPadre().getId() + " ," + a.getMadre().getId() + " ,";
+                    linea += a.getPadre().getId() + "," + a.getMadre().getId() + ",";
                 else
                     linea += ",,";
 
-                linea += a.getNumeroCrias() + " ,";
+                linea += a.getNumeroCrias() + ",";
 
                 for (int i = 0; i < a.getNumeroCrias(); i++) {
 
@@ -57,7 +57,7 @@ public class CSVUtils {
                     if (i + 1 == a.getNumeroCrias())
                         linea += cria;
                     else
-                        linea += cria + " ,";
+                        linea += cria + ",";
 
                 }
 
@@ -96,7 +96,7 @@ public class CSVUtils {
                     continue;
                 }
 
-                String[] valores = linea.split(" ,");
+                String[] valores = linea.trim().split(",");
 
                 int id = Integer.parseInt(valores[0]);
                 String nombre = valores[1];
